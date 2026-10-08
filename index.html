@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="theme-color" content="#09cc7f">
+    <title>Studio PodoVitta | Cuidado Premium para seus Pés</title>
+    <meta name="description" content="Podologia em São Paulo com a Podóloga Camila Andrade: tratamento de unhas, podologia estética, palmilhas e curativos. Agende sua avaliação pelo WhatsApp.">
+    <meta property="og:title" content="Studio PodoVitta | Cuidado Premium para seus Pés">
+    <meta property="og:description" content="Atendimento humanizado e técnica apurada há mais de 15 anos. Agende pelo WhatsApp.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2309cc7f'/%3E%3Ccircle cx='32' cy='32' r='10' fill='white'/%3E%3C/svg%3E">
+    <link rel="preload" as="image" href="img/hero/picture.jpg" fetchpriority="high">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <div class="logo-mark">
+                    <i class="fas fa-shoe-prints"></i>
+                </div>
+                <span>Studio PodoVitta</span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="#servicos">Serviços</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#videos">Vídeos</a>
+                <a href="#beneficios">Benefícios</a>
+                <a href="#depoimentos">Depoimentos</a>
+                <a href="#blog">Blog</a>
+                <a href="#agendamento">Agendar</a>
+                <a href="#localizacao">Localização</a>
+            </nav>
+            
+            <div class="nav-cta">
+                <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20no%20Studio%20PodoVitta." 
+                   class="btn btn-whatsapp" 
+                   target="_blank" 
+                   rel="noopener">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO COM IMAGEM DE FUNDO -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="/img/hero/pexels-alexeydemidov-11193416.jpg" 
+                 alt="Imagem Principal do Site" fetchpriority="high" decoding="async">
+        </div>
+        <div class="hero-overlay"></div>
+        <a class="credit credit-hero" href="https://www.pexels.com/pt-br/foto/pes-flores-grama-de-pe-11193416/" target="_blank" rel="noopener noreferrer" aria-label="Crédito: Imagem de Magnific (abre em nova aba)">Foto de Alexey Demidov no Pexels <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="dot"></span>
+                        <span>Agenda aberta • Atendimento personalizado</span>
+                    </div>
+                    
+                    <h1 class="display">
+                        Seus pés <em>merecem</em> cuidado de excelência.
+                    </h1>
+                    
+                    <p>Com mais de 15 anos de experiência, a Podóloga Camila Andrade une técnica apurada e atendimento humanizado para transformar o cuidado com seus pés em uma experiência única de bem-estar.</p>
+                    
+                    <div class="hero-cta">
+                        <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20no%20Studio%20PodoVitta." 
+                           class="btn btn-whatsapp" 
+                           target="_blank" 
+                           rel="noopener">
+                            <i class="fab fa-whatsapp"></i>
+                            Agendar no WhatsApp
+                        </a>
+                        <a href="#servicos" class="btn btn-light">
+                            Conhecer serviços
+                        </a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <div class="hero-stat-num"><b class="count" data-to="15">15</b><span>+</span></div>
+                            <div class="hero-stat-label">Anos de experiência</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-num"><b class="count" data-to="5" data-suffix="k">5k</b><span>+</span></div>
+                            <div class="hero-stat-label">Pacientes atendidos</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-num"><b class="count" data-to="4.9" data-dec="1">4.9</b><span>★</span></div>
+                            <div class="hero-stat-label">Avaliação média</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-card">
+                    <a class="credit credit-portrait" href="https://www.magnific.com/br/fotos-gratis/depilacao-a-laser-terapia-de-remocao-de-cabelo_10025268.htm#fromView=search&page=1&position=15&uuid=c601ffc9-6bd9-4bb9-b301-8f1b2df9acc0&track=ais_hybrid&query=Pod%C3%B3loga+profissional" target="_blank" rel="noopener noreferrer" aria-label="Crédito: Imagem de Magnific (abre em nova aba)">Imagem no Magnific <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    <button type="button" class="portrait-btn" id="openCareer" aria-haspopup="dialog" aria-label="Ver a trajetória da Podóloga Camila Andrade">
+                        <img src="/img/profissional/podologa.jpg" alt="Camila Andrade, podóloga" width="380" height="440">
+                        <span class="portrait-info">
+                            <strong>Camila Andrade</strong>
+                            <small>Podóloga • CBO 3222-05</small>
+                        </span>
+                        <span class="portrait-hint"><i class="fas fa-plus"></i> Ver trajetória</span>
+                    </button>
+                    <p class="hero-card-quote">"Cuidar dos pés é devolver às pessoas a liberdade de caminhar com conforto e confiança."</p>
+                    <div class="hero-card-tags">
+                        <span class="hero-card-tag"><i class="fas fa-certificate"></i> 15+ anos</span>
+                        <span class="hero-card-tag"><i class="fas fa-award"></i> Certificada</span>
+                        <span class="hero-card-tag"><i class="fas fa-star"></i> 4.9</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <span>Role</span>
+            <div class="hero-scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee">
+        <div class="marquee-track">
+            <div class="marquee-item">
+                <span>Podologia Estética</span>
+                <i class="fas fa-circle"></i>
+                <span>Tratamento de Unhas</span>
+                <i class="fas fa-circle"></i>
+                <span>Palmilhas Personalizadas</span>
+                <i class="fas fa-circle"></i>
+                <span>Podologia Infantil</span>
+                <i class="fas fa-circle"></i>
+                <span>Podologia Geriátrica</span>
+                <i class="fas fa-circle"></i>
+                <span>Curativos Especiais</span>
+                <i class="fas fa-circle"></i>
+            </div>
+            <div class="marquee-item">
+                <span>Podologia Estética</span>
+                <i class="fas fa-circle"></i>
+                <span>Tratamento de Unhas</span>
+                <i class="fas fa-circle"></i>
+                <span>Palmilhas Personalizadas</span>
+                <i class="fas fa-circle"></i>
+                <span>Podologia Infantil</span>
+                <i class="fas fa-circle"></i>
+                <span>Podologia Geriátrica</span>
+                <i class="fas fa-circle"></i>
+                <span>Curativos Especiais</span>
+                <i class="fas fa-circle"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVIÇOS -->
+    <section class="section" id="servicos">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">
+                    <span class="line"></span>
+                    <span>Nossos Serviços</span>
+                </div>
+                <h2 class="display">Tratamentos completos para <em>cada necessidade</em></h2>
+                <p>Do cuidado estético à saúde dos seus pés, oferecemos soluções feitas sob medida para você, em um ambiente seguro e com total rigor na esterilização.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon-wrap">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <div class="service-num">01 / Estética</div>
+                    <h3 class="service-title">Podologia Estética</h3>
+                    <p class="service-desc">Cuidados que realçam a beleza natural dos seus pés, com lixamento, hidratação profunda e finalização impecável.</p>
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Podologia%20Est%C3%A9tica." target="_blank" rel="noopener" class="service-link">
+                        Agendar <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card reveal">
+                    <div class="service-icon-wrap">
+                        <i class="fas fa-hand-holding-medical"></i>
+                    </div>
+                    <div class="service-num">02 / Clínico</div>
+                    <h3 class="service-title">Tratamento de Unhas</h3>
+                    <p class="service-desc">Soluções especializadas para unhas encravadas, micose, onicofagia e demais patologias ungueais.</p>
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Tratamento%20de%20Unhas." target="_blank" rel="noopener" class="service-link">
+                        Agendar <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card reveal">
+                    <div class="service-icon-wrap">
+                        <i class="fas fa-band-aid"></i>
+                    </div>
+                    <div class="service-num">03 / Curativos</div>
+                    <h3 class="service-title">Curativos Especiais</h3>
+                    <p class="service-desc">Tratamento avançado de feridas, calosidades, fissuras e úlceras com técnicas modernas de cicatrização.</p>
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Curativos%20Especiais." target="_blank" rel="noopener" class="service-link">
+                        Agendar <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card reveal">
+                    <div class="service-icon-wrap">
+                        <i class="fas fa-shoe-prints"></i>
+                    </div>
+                    <div class="service-num">04 / Ortopedia</div>
+                    <h3 class="service-title">Palmilhas Personalizadas</h3>
+                    <p class="service-desc">Avaliação biomecânica completa e confecção de palmilhas sob medida para corrigir a pisada.</p>
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Palmilhas%20Personalizadas." target="_blank" rel="noopener" class="service-link">
+                        Agendar <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card reveal">
+                    <div class="service-icon-wrap">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <div class="service-num">05 / Infantil</div>
+                    <h3 class="service-title">Podologia Infantil</h3>
+                    <p class="service-desc">Acompanhamento lúdico e especializado para o desenvolvimento saudável dos pés das crianças.</p>
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Podologia%20Infantil." target="_blank" rel="noopener" class="service-link">
+                        Agendar <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card reveal">
+                    <div class="service-icon-wrap">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="service-num">06 / Geriatria</div>
+                    <h3 class="service-title">Podologia Geriátrica</h3>
+                    <p class="service-desc">Cuidado atencioso para idosos, prevenindo complicações e promovendo maior mobilidade e conforto.</p>
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Podologia%20Geri%C3%A1trica." target="_blank" rel="noopener" class="service-link">
+                        Agendar <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section sobre" id="sobre">
+        <div class="container">
+            <div class="sobre-grid">
+                <div class="sobre-img-wrap reveal">
+                    <div class="sobre-img-deco"></div>
+                    <img src="/img/sobre/podovitta.jpg" alt="Imagem Podovitta">
+                    <a class="credit" href="https://www.magnific.com/br/imagem-ia-gratis/vista-de-pes-realistas-tocando-agua-cristalina-fluindo_138361216.htm#fromView=search&page=1&position=1&uuid=bc936d97-91ba-4091-97ae-a4b8b919ec83&track=ais_hybrid&query=feet+care" target="_blank" rel="noopener noreferrer" aria-label="Crédito: Imagem de Magnific (abre em nova aba)">Imagem de Magnific <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                </div>
+                
+                <div class="sobre-content reveal">
+                    <div class="section-label">
+                        <span class="line"></span>
+                        <span>Sobre o Studio PodoVitta</span>
+                    </div>
+                    
+                    <h3>Onde a <em>técnica</em> encontra o cuidado humano</h3>
+                    
+                    <p>O Studio PodoVitta nasceu em 2010 pela paixão da podóloga Camila Andrade em cuidar de você de forma humanizada, começando pelos pés. Acreditamos que pés saudáveis significam liberdade para ir onde você quiser.</p>
+                    
+                    <p>Aqui, você encontra um ambiente tranquilo e acolhedor, com total segurança e rigor nos cuidados de esterilização.</p>
+                    
+                    <div class="sobre-features">
+                        <div class="sobre-feature">
+                            <div class="sobre-feature-icon">
+                                <i class="fas fa-microscope"></i>
+                            </div>
+                            <div class="sobre-feature-text">
+                                <h5>Tecnologia Avançada</h5>
+                                <p>Equipamentos para diagnósticos precisos.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="sobre-feature">
+                            <div class="sobre-feature-icon">
+                                <i class="fas fa-user-nurse"></i>
+                            </div>
+                            <div class="sobre-feature-text">
+                                <h5>Equipe Especializada</h5>
+                                <p>Profissionais com formação contínua.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="sobre-feature">
+                            <div class="sobre-feature-icon">
+                                <i class="fas fa-spray-can-sparkles"></i>
+                            </div>
+                            <div class="sobre-feature-text">
+                                <h5>Biossegurança Total</h5>
+                                <p>Materiais 100% esterilizados.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="sobre-feature">
+                            <div class="sobre-feature-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="sobre-feature-text">
+                                <h5>Atendimento Humanizado</h5>
+                                <p>Cada paciente é único para nós.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section class="section galeria" id="galeria">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label"><span class="line"></span> Galeria</div>
+                <h2>Um espaço feito para você se sentir bem</h2>
+                <p>Conheça o ambiente, os tratamentos e o cuidado que fazem parte de cada atendimento.</p>
+            </div>
+            <div class="g-grid">
+                <figure class="g-item big" data-full="/img/galeria/pexels-nicobecker-5619447.jpg" data-cap="Ambiente de atendimento: Consultório pensado para o seu conforto" tabindex="0" role="button" aria-label="Ampliar foto: Ambiente de atendimento">
+                    <i class="fas fa-spa g-fallback"></i>
+                    <img src="/img/galeria/pexels-nicobecker-5619447.jpg" alt="Ambiente de atendimento" loading="lazy" onerror="this.remove()">
+                    <a class="credit" href="https://www.pexels.com/pt-br/foto/mulher-consultorio-clinico-clinica-5619447/" target="_blank" rel="noopener noreferrer" aria-label="Crédito: Imagem de Magnific (abre em nova aba)">Imagem de Nico Becker no Pexels <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    <figcaption><strong>Ambiente de atendimento</strong><span>Consultório pensado para o seu conforto</span></figcaption>
+                </figure>
+                <figure class="g-item " data-full="/img/galeria/podologia-estetica.jpg" data-cap="Podologia estética: Acabamento e cuidado nos detalhes" tabindex="0" role="button" aria-label="Ampliar foto: Podologia estética">
+                    <i class="fas fa-hand-sparkles g-fallback"></i>
+                    <img src="/img/galeria/podologia-estetica.jpg" alt="Podologia estética" loading="lazy" onerror="this.remove()">
+                    <a class="credit" href="https://www.magnific.com/br/fotos-gratis/processo-de-manicure-para-unhas_19332680.htm#fromView=search&page=1&position=16&uuid=899cc3dc-3e91-4a6e-aed0-a81814725f72&track=ais_hybrid&query=podol%C3%B3gia+est%C3%A9tica+cliente" target="_blank" rel="noopener noreferrer" aria-label="Crédito: Imagem de Magnific (abre em nova aba)">Imagem de Magnific <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    <figcaption><strong>Podologia estética</strong><span>Acabamento e cuidado nos detalhes</span></figcaption>
+                </figure>
+                <figure class="g-item " data-full="/img/galeria/escalda-pes.jpg" data-cap="Escalda-pés: Preparo relaxante antes do atendimento" tabindex="0" role="button" aria-label="Ampliar foto: Escalda-pés">
+                    <i class="fas fa-droplet g-fallback"></i>
+                    <img src="/img/galeria/escalda-pes.jpg" alt="Escalda-pés" loading="lazy" onerror="this.remove()">
+                    <a class="credit" href="https://www.magnific.com/br/fotos-gratis/tratamento-e-produto-spa-para-pes-e-maos-femininas_12985873.htm#fromView=search&page=2&position=8&uuid=75ecf2d0-7a10-4365-a8ba-96470903214d&track=ais_hybrid&query=podol%C3%B3gia" target="_blank" rel="noopener noreferrer" aria-label="Crédito: Imagem de Magnific (abre em nova aba)">Imagem de jcomp no Magnific <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    <figcaption><strong>Escalda-pés</strong><span>Preparo relaxante antes do atendimento</span></figcaption>
+                </figure>
+                <figure class="g-item " data-full="/img/galeria/tratamento-unha-encravada.jpg" data-cap="Tratamento de unhas: Técnica segura e materiais esterilizados" tabindex="0" role="button" aria-label="Ampliar foto: Tratamento de unhas">
+                    <i class="fas fa-notes-medical g-fallback"></i>
+                    <img src="/img/galeria/tratamento-unha-encravada.jpg" alt="Tratamento de unhas" loading="lazy" onerror="this.remove()">
+                    <a class="credit" href="https://pixabay.com/pt/users/wangyanwei-21040798/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6157933" target="_blank" rel="noopener noreferrer" aria-label="Crédito: Imagem de Magnific (abre em nova aba)">Imagem de wangyanwei no Pixabay <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    <figcaption><strong>Tratamento de unhas</strong><span>Técnica segura e materiais esterilizados</span></figcaption>
+                </figure>
+                <figure class="g-item " data-full="/img/galeria/hidratacao-nos-pes.jpg" data-cap="Hidratação: Produtos selecionados para cada pele" tabindex="0" role="button" aria-label="Ampliar foto: Hidratação">
+                    <i class="fas fa-leaf g-fallback"></i>
+                    <img src="/img/galeria/hidratacao-nos-pes.jpg" alt="Hidratação" loading="lazy" onerror="this.remove()">
+                    <a class="credit" href="https://www.magnific.com/br/fotos-gratis/mulher-de-alto-angulo-sendo-massageada-no-spa_38307716.htm#fromView=search&page=1&position=24&uuid=088a33fd-6307-47c5-8535-f0f54fa52a73&track=ais_hybrid&query=hidrata%C3%A7%C3%A3o+nos++p%C3%A9s+pod%C3%B3loga" target="_blank" rel="noopener noreferrer" aria-label="Crédito: Imagem de Magnific (abre em nova aba)">Imagem de Magnific <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    <figcaption><strong>Hidratação</strong><span>Produtos selecionados para cada pele</span></figcaption>
+                </figure>
+                <figure class="g-item wide" data-full="/img/galeria/avaliacao-individual.jpg" data-cap="Avaliação individual: Cada plano de cuidado começa por uma boa conversa" tabindex="0" role="button" aria-label="Ampliar foto: Avaliação individual">
+                    <i class="fas fa-clipboard-check g-fallback"></i>
+                    <img src="/img/galeria/avaliacao-individual.jpg" alt="Avaliação individual" loading="lazy" onerror="this.remove()">
+                    <a class="credit" href="https://www.magnific.com/br/fotos-gratis/mulher-preenchendo-um-formulario_19100464.htm#fromView=search&page=1&position=24&uuid=1ec68690-5e2d-469f-b80a-d869afe48778&track=ais_hybrid&query=avalia%C3%A7%C3%A3o+individual" target="_blank" rel="noopener noreferrer" aria-label="Crédito: Imagem de Magnific (abre em nova aba)">Imagem de rawpixel.com no Magnific <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    <figcaption><strong>Avaliação individual</strong><span>Cada plano de cuidado começa por uma boa conversa</span></figcaption>
+                </figure>
+                <figure class="g-item wide" data-full="/img/galeria/camila-andrade.jpg" data-cap="Camila Andrade: Mais de 15 anos de experiência clínica" tabindex="0" role="button" aria-label="Ampliar foto: Podóloga Camila Andrade">
+                    <i class="fas fa-user-doctor g-fallback"></i>
+                    <img src="/img/galeria/camila-andrade.jpg" alt="Camila Andrade" loading="lazy" onerror="this.remove()">
+                    <a class="credit" href="https://www.magnific.com/br/fotos-gratis/higiene-das-unhas-e-vista-frontal-do-cuidado_11295190.htm#fromView=search&page=1&position=38&uuid=e06c4f0a-b6e3-4b38-a827-6f8656cc9b57&track=ais_hybrid&query=pod%C3%B3loga" target="_blank" rel="noopener noreferrer" aria-label="Crédito: Imagem de Magnific (abre em nova aba)">Imagem de Magnific <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    <figcaption><strong>Camila Andrade</strong><span>Mais de 15 anos de experiência clínica</span></figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- VÍDEOS -->
+    <section class="section videos" id="videos">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label"><span class="line"></span> Vídeos</div>
+                <h2>Veja como cuidamos dos seus pés</h2>
+                <p>Vídeos curtos para você conhecer o atendimento e aprender a cuidar melhor dos pés em casa.</p>
+            </div>
+            <div class="v-grid">
+                <div role="button" tabindex="0" class="v-card feat" data-video="/video/studio-podovitta.mp4" data-cap="Conheça o Studio PodoVitta" aria-label="Assistir: Conheça o Studio PodoVitta">
+                    <video class="v-thumb" src="/video/studio-podovitta.mp4#t=0.1" muted playsinline preload="metadata" tabindex="-1" aria-hidden="true"></video>
+                    <a class="credit" href="https://www.magnific.com/br/video-gratuito/mulher-fazendo-unhas-salao-beleza_5391898#fromView=search&page=1&position=9&uuid=c59dc787-51fe-4fb3-9f4b-106557297a92&track=ais_hybrid" target="_blank" rel="noopener noreferrer" aria-label="Crédito: Vídeo de Magnific (abre em nova aba)">Vídeo de Magnific <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    <span class="v-play"><i class="fas fa-play"></i></span>
+                    <span class="v-text"><strong>Conheça o Studio PodoVitta</strong><small>Um passeio pelo consultório e pela nossa forma de cuidar</small></span>
+                </div>
+                <div role="button" tabindex="0" class="v-card " data-video="/video/0_Woman_Manicure_1280x720.mp4" data-cap="Como é a primeira consulta" aria-label="Assistir: Como é a primeira consulta">
+                    <video class="v-thumb" src="/video/0_Woman_Manicure_1280x720.mp4" muted playsinline preload="metadata" tabindex="-1" aria-hidden="true"></video>
+                    <a class="credit" href="https://www.magnific.com/br/video-gratuito/mulher-recebendo-manicure_5391860#fromView=search&page=2&position=12&uuid=32a067ee-8166-4289-abbb-d2ded1dad110&track=ais_hybrid" target="_blank" rel="noopener noreferrer" aria-label="Crédito: Vídeo de Magnific (abre em nova aba)">Vídeo de Magnific <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    <span class="v-play"><i class="fas fa-play"></i></span>
+                    <span class="v-text"><strong>Como é a primeira consulta</strong><small>Passo a passo da avaliação</small></span>
+                </div>
+                <div role="button" tabindex="0" class="v-card " data-video="/video/515171_Child_Salon_1280x720.mp4" data-cap="Cuidados com as unhas" aria-label="Assistir: Cuidados com as unhas">
+                    <video class="v-thumb" src="/video/515171_Child_Salon_1280x720.mp4#t=0.1" muted playsinline preload="metadata" tabindex="-1" aria-hidden="true"></video>
+                    <a class="credit" href="https://www.magnific.com/br/video-gratuito/mulher-faz-manicure-salao-beleza_47605#fromView=search&page=1&position=0&uuid=1b1cab1a-a051-4d0b-9df1-42b36bca3348&track=ais_hybrid" target="_blank" rel="noopener noreferrer" aria-label="Crédito: Vídeo de Magnific (abre em nova aba)">Vídeo de StockSeller no Magnific <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    <span class="v-play"><i class="fas fa-play"></i></span>
+                    <span class="v-text"><strong>Cuidados com as unhas</strong><small>Dicas da Podóloga Camila para o dia a dia</small></span>
+                </div>
+                <div role="button" tabindex="0" class="v-card " data-video="/video/6002077_Massage_Spa_1280x720.mp4" data-cap="Hidratação e cuidados diários" aria-label="Assistir: Hidratação e cuidados diários">
+                    <video class="v-thumb" src="/video/6002077_Massage_Spa_1280x720.mp4#t=0.1" muted playsinline preload="metadata" tabindex="-1" aria-hidden="true"></video>
+                    <a class="credit" href="https://www.magnific.com/br/video-gratuito/homem-comec-massagem_2818074#fromView=search&page=1&position=4&uuid=9c77cdd7-eeac-420f-83cb-56eed2d5104d&track=ais_hybrid" target="_blank" rel="noopener noreferrer" aria-label="Crédito: Vídeo de Magnific (abre em nova aba)">Vídeo de Magnific <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    <span class="v-play"><i class="fas fa-play"></i></span>
+                    <span class="v-text"><strong>Hidratação e cuidados diários</strong><small>Rotina simples para pés saudáveis em casa</small></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFÍCIOS -->
+    <section class="section benefits" id="beneficios">
+        <div class="container">
+            <div class="section-header center reveal">
+                <div class="section-label">
+                    <span class="line"></span>
+                    <span>Benefícios</span>
+                    <span class="line"></span>
+                </div>
+                <h2 class="display">Por que escolher o <em>Studio PodoVitta</em>?</h2>
+                <p>Cuidado e carinho em cada detalhe do seu atendimento.</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card reveal">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4>Pontualidade</h4>
+                    <p>Respeitamos seu tempo com agendamentos flexíveis e atendimento sem atrasos.</p>
+                </div>
+                
+                <div class="benefit-card reveal">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h4>Ambiente Seguro</h4>
+                    <p>Protocolos rigorosos de higiene e materiais descartáveis em todos os procedimentos.</p>
+                </div>
+                
+                <div class="benefit-card reveal">
+                    <div class="benefit-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h4>Cuidado Único</h4>
+                    <p>Ambiente acolhedor, aromaterapia e atenção personalizada do início ao fim.</p>
+                </div>
+                
+                <div class="benefit-card reveal">
+                    <div class="benefit-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h4>Agendamento Fácil</h4>
+                    <p>Marque sua consulta diretamente pelo WhatsApp em menos de 1 minuto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="section testimonials" id="depoimentos">
+        <div class="container">
+            <div class="section-header center reveal">
+                <div class="section-label">
+                    <span class="line"></span>
+                    <span>Depoimentos</span>
+                    <span class="line"></span>
+                </div>
+                <h2 class="display">Histórias de quem <em>confia</em> no Studio PodoVitta</h2>
+                <p>Mais de 1.000 clientes satisfeitos com nossa excelência.</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">Excelente atendimento! Resolvi um problema de unha encravada que me incomodava há meses. A equipe é extremamente atenciosa e o ambiente é impecável.</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Maria Silva" class="testimonial-avatar">
+                        <div class="testimonial-author-info">
+                            <h5>Maria Silva</h5>
+                            <p>Cliente há 2 anos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">Minha mãe é idosa e tem dificuldade de locomoção. O atendimento domiciliar foi fundamental. Cuidado, paciência e profissionalismo. Recomendo demais!</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos Oliveira" class="testimonial-avatar">
+                        <div class="testimonial-author-info">
+                            <h5>Carlos Oliveira</h5>
+                            <p>Cliente há 1 ano</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">As palmilhas personalizadas mudaram minha vida. Minhas dores no joelho diminuíram significativamente. Equipe muito competente e atenciosa!</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ana Paula" class="testimonial-avatar">
+                        <div class="testimonial-author-info">
+                            <h5>Ana Paula</h5>
+                            <p>Cliente há 3 anos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG -->
+    <section class="section blog" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label"><span class="line"></span> Blog</div>
+                <h2>Dicas da Podóloga Camila para os seus pés</h2>
+                <p>Informação clara para cuidar da saúde dos pés no dia a dia e saber a hora de procurar ajuda.</p>
+            </div>
+            <div class="b-grid" id="blogGrid"></div>
+        </div>
+    </section>
+
+    <!-- AGENDAMENTO WHATSAPP -->
+    <section class="section agendamento" id="agendamento">
+        <div class="container">
+            <div class="agendamento-wrapper">
+                <div class="agendamento-info reveal">
+                    <div class="section-label">
+                        <span class="line"></span>
+                        <span>Agendamento</span>
+                    </div>
+                    
+                    <h2>Vamos cuidar dos seus <em>pés</em>?</h2>
+                    
+                    <p>Agende sua consulta em poucos segundos pelo WhatsApp. É rápido, prático e você fala direto com nossa equipe.</p>
+                    
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-item-text">
+                                <div class="label">WhatsApp</div>
+                                <div class="value">(11) 99999-9999</div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-item-text">
+                                <div class="label">Telefone</div>
+                                <div class="value">(11) 1234-5678</div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-item-text">
+                                <div class="label">E-mail</div>
+                                <div class="value">contato@studiopodovitta.com.br</div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fas fa-location-dot"></i>
+                            </div>
+                            <div class="contact-item-text">
+                                <div class="label">Endereço</div>
+                                <div class="value">Av. Paulista, 1010 - Bela Vista, São Paulo - SP</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="whatsapp-card reveal">
+                    <div class="whatsapp-card-content">
+                        <div class="whatsapp-icon-big">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        
+                        <h3>Agende pelo WhatsApp</h3>
+                        <p>Sem formulários longos. Você fala direto com nossa equipe e escolhe o melhor horário.</p>
+                        
+                        <div class="whatsapp-steps">
+                            <div class="whatsapp-step">
+                                <div class="whatsapp-step-num">1</div>
+                                <span>Clique no botão abaixo</span>
+                            </div>
+                            <div class="whatsapp-step">
+                                <div class="whatsapp-step-num">2</div>
+                                <span>Envie sua mensagem</span>
+                            </div>
+                            <div class="whatsapp-step">
+                                <div class="whatsapp-step-num">3</div>
+                                <span>Confirme seu horário</span>
+                            </div>
+                        </div>
+                        
+                        <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20no%20Studio%20PodoVitta.%20Poderia%20me%20informar%20os%20hor%C3%A1rios%20dispon%C3%ADveis%3F" 
+                           class="btn" 
+                           target="_blank" 
+                           rel="noopener">
+                            <i class="fab fa-whatsapp"></i>
+                            Iniciar conversa
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- LOCALIZAÇÃO -->
+    <section class="section localizacao" id="localizacao">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label"><span class="line"></span> Localização</div>
+                <h2>Fácil de encontrar, perto de você</h2>
+                <p>Estamos na Av. Paulista, em uma região com fácil acesso por metrô, ônibus e carro.</p>
+            </div>
+            <div class="map-wrapper reveal">
+                <div class="map-frame">
+                    <iframe
+                        src="https://maps.google.com/maps?q=Av.%20Paulista%2C%201010%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP&hl=pt-BR&z=17&output=embed"
+                        width="100%" height="100%" style="border:0"
+                        allowfullscreen loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa com a localização do Studio PodoVitta"></iframe>
+                </div>
+                <div class="map-info">
+                    <div class="map-info-icon"><i class="fas fa-location-dot"></i></div>
+                    <h3>Studio PodoVitta</h3>
+                    <p>Av. Paulista, 1010 - Bela Vista, São Paulo - SP</p>
+                    <ul class="map-details">
+                        <li><i class="fas fa-train-subway"></i> A 5 min da estação Trianon-Masp</li>
+                        <li><i class="fas fa-square-parking"></i> Estacionamento conveniado</li>
+                        <li><i class="fas fa-clock"></i> Seg a Sex, 9h às 18h</li>
+                    </ul>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=Av.%20Paulista%2C%201010%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP" class="btn btn-outline" target="_blank" rel="noopener">
+                        <i class="fas fa-diamond-turn-right"></i> Como chegar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-mark">
+                            <i class="fas fa-shoe-prints"></i>
+                        </div>
+                        <span>Studio PodoVitta</span>
+                    </div>
+                    <p>Excelência em podologia, promovendo saúde, bem-estar e a liberdade de movimento que você merece.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Podologia Estética</a></li>
+                        <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Tratamento de Unhas</a></li>
+                        <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Palmilhas</a></li>
+                        <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Curativos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Institucional</h4>
+                    <ul>
+                        <li><a href="#sobre"><i class="fas fa-chevron-right"></i> Sobre nós</a></li>
+                        <li><a href="#galeria"><i class="fas fa-chevron-right"></i> Galeria</a></li>
+                        <li><a href="#videos"><i class="fas fa-chevron-right"></i> Vídeos</a></li>
+                        <li><a href="#beneficios"><i class="fas fa-chevron-right"></i> Benefícios</a></li>
+                        <li><a href="#depoimentos"><i class="fas fa-chevron-right"></i> Depoimentos</a></li>
+                        <li><a href="#blog"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                        <li><a href="#agendamento"><i class="fas fa-chevron-right"></i> Agendamento</a></li>
+                        <li><a href="#localizacao"><i class="fas fa-chevron-right"></i> Localização</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="https://wa.me/5511999999999" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> (11) 99999-9999</a></li>
+                        <li><a href="tel:+551134567890"><i class="fas fa-phone"></i> (11) 1234-5678</a></li>
+                        <li><a href="mailto:contato@studiopodovitta.com.br"><i class="fas fa-envelope"></i> contato@studiopodovitta.com.br</a></li>
+                        <li><a href="#localizacao"><i class="fas fa-location-dot"></i> Av. Paulista, 1010</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal-text">
+                    <p>© 2026 Studio PodoVitta. Todos os direitos reservados.</p>
+                    <p class="footer-demo-note">Fotos dos depoimentos: <a href="https://randomuser.me" target="_blank" rel="noopener noreferrer">Random User Generator</a>.</p>
+                    
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#" data-legal="privacy">Política de Privacidade</a>
+                    <a href="#" data-legal="terms">Termos de Uso</a>
+                </div>
+                <div class="copyright">Desenvolvido com
+                <i class="fa-solid fa-mug-hot" style="color: var(--theme); font-size: 0.95em;" aria-hidden="true"></i>por <strong class="dev-name">Julio Gonzales</strong>
+             </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- LIGHTBOX (galeria e vídeos) -->
+    <div class="overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualização ampliada" hidden>
+        <button class="ov-close" data-close aria-label="Fechar"><i class="fas fa-xmark"></i></button>
+        <button class="lb-nav prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+        <div class="lb-stage"><div class="lb-body"></div><p class="lb-cap"></p><a class="credit lb-credit" target="_blank" rel="noopener noreferrer" hidden></a></div>
+        <button class="lb-nav next" aria-label="Próxima"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <!-- TRAJETÓRIA DA PROFISSIONAL -->
+    <div class="overlay" id="career" role="dialog" aria-modal="true" aria-labelledby="careerTitle" hidden>
+        <div class="career-card">
+            <button class="ov-close" data-close aria-label="Fechar"><i class="fas fa-xmark"></i></button>
+            <div class="career-photo"><img src="/img/profissional/podologa.jpg" alt="Camila Andrade"><a class="credit" href="https://www.magnific.com/br/fotos-gratis/depilacao-a-laser-terapia-de-remocao-de-cabelo_10025268.htm#fromView=search&page=1&position=15&uuid=c601ffc9-6bd9-4bb9-b301-8f1b2df9acc0&track=ais_hybrid&query=Pod%C3%B3loga+profissional" target="_blank" rel="noopener noreferrer" aria-label="Crédito: Imagem de Magnific (abre em nova aba)">Imagem de Senivpetro no Magnific <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div>
+            <div class="career-info">
+                <h3 id="careerTitle" class="display">Camila Andrade</h3>
+                <p class="career-role">Podóloga • CBO 3222-05</p>
+                <ol class="timeline">
+                    <li><b>2011</b><span>Início da atuação clínica em podologia.</span></li>
+                    <li><b>Formação</b><span>Capacitação técnica e certificação profissional na área.</span></li>
+                    <li><b>Atendimento humanizado</b><span>Foco em tratamento de unhas, podologia estética e cuidado preventivo.</span></li>
+                    <li><b>Hoje</b><span>Mais de 1 mil pacientes atendidos e avaliação média de 4.9.</span></li>
+                </ol>
+                <a class="btn btn-whatsapp" href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Podóloga%20Camila." target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Agendar com a Podóloga Camila</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ARTIGO DO BLOG -->
+    <div class="overlay" id="post" role="dialog" aria-modal="true" aria-labelledby="postTitle" hidden>
+        <div class="legal-card post-card">
+            <div class="legal-head">
+                <h3 id="postTitle" class="display"></h3>
+                <button class="ov-close" data-close aria-label="Fechar"><i class="fas fa-xmark"></i></button>
+            </div>
+            <div class="legal-body" id="postBody"></div>
+        </div>
+    </div>
+
+    <!-- POLÍTICA DE PRIVACIDADE E TERMOS DE USO -->
+    <div class="overlay" id="legal" role="dialog" aria-modal="true" aria-labelledby="legalTitle" hidden>
+        <div class="legal-card">
+            <div class="legal-head">
+                <h3 id="legalTitle" class="display">Política de Privacidade</h3>
+                                <button class="ov-close" data-close aria-label="Fechar"><i class="fas fa-xmark"></i></button>
+            </div>
+            <div class="legal-body">
+                <article data-pane="privacy">
+                    <p class="legal-date">Última atualização: setembro de 2026</p>
+                    <p>Esta Política explica como o Studio PodoVitta trata dados pessoais em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018, a LGPD). Este site é <strong>somente informativo</strong>: ele apresenta a clínica, os serviços e os meios de contato.</p>
+
+                    <h4>1. Quem é o responsável</h4>
+                    <p>O Studio PodoVitta, com endereço na Av. Paulista, 1010, Bela Vista, São Paulo, SP, é a responsável pelo tratamento dos dados descritos aqui. Contato para assuntos de privacidade: <a href="mailto:contato@studiopodovitta.com.br">contato@studiopodovitta.com.br</a>.</p>
+
+                    <h4>2. O que este site não faz</h4>
+                    <p>O site não tem cadastro, área de login, formulários, comentários, venda ou pagamento online. Também não usa cookies de publicidade nem ferramentas de rastreamento do seu comportamento de navegação.</p>
+
+                    <h4>3. Quais dados podem ser tratados</h4>
+                    <ul>
+                        <li><strong>Registros técnicos de acesso:</strong> como endereço IP, tipo de navegador, data e hora. Eles são gerados automaticamente pelo serviço de hospedagem para garantir o funcionamento e a segurança do site.</li>
+                        <li><strong>Dados que você nos envia:</strong> ao chamar a clínica pelo WhatsApp, telefone ou e-mail, recebemos as informações que você decidir enviar, como nome, telefone e o conteúdo da mensagem.</li>
+                    </ul>
+
+                    <h4>4. Para que usamos os dados</h4>
+                    <p>Usamos os dados de contato apenas para responder à sua mensagem, informar horários e agendar ou confirmar atendimentos. As bases legais são a realização de procedimentos preliminares a pedido do titular e o legítimo interesse (LGPD, art. 7º, V e IX). Não usamos seus dados para decisões automatizadas nem para publicidade de terceiros.</p>
+
+                    <h4>5. Dados de saúde</h4>
+                    <p>Informações clínicas são coletadas e registradas presencialmente, durante o atendimento, e seguem regras próprias de sigilo e de guarda de prontuário. Antes da consulta, recomendamos não enviar exames ou detalhes de saúde por mensagem além do necessário para o agendamento.</p>
+
+                    <h4>6. Serviços de terceiros</h4>
+                    <ul>
+                        <li>O botão de WhatsApp abre um aplicativo operado por terceiros, que trata seus dados conforme a própria política.</li>
+                        <li>Fontes, ícones e algumas imagens do site são carregados de servidores externos (como Google Fonts, cdnjs e Unsplash). Nesse carregamento, esses serviços podem receber seu endereço IP e dados do navegador.</li>
+                    </ul>
+
+                    <h4>7. Compartilhamento</h4>
+                    <p>Não vendemos nem alugamos dados pessoais. Podemos compartilhá-los somente com prestadores que ajudam a manter o site e o atendimento, ou com autoridades quando houver obrigação legal.</p>
+
+                    <h4>8. Por quanto tempo guardamos</h4>
+                    <p>Mantemos os dados de contato pelo tempo necessário para atender sua solicitação e cumprir obrigações legais. Depois disso, eles são eliminados ou anonimizados.</p>
+
+                    <h4>9. Seus direitos</h4>
+                    <p>Pela LGPD (art. 18), você pode solicitar: confirmação de que tratamos seus dados; acesso; correção; anonimização, bloqueio ou eliminação de dados desnecessários; portabilidade; informação sobre compartilhamentos; e a revogação de consentimento, quando ele for a base do tratamento. Envie o pedido para o e-mail acima. Você também pode recorrer à Autoridade Nacional de Proteção de Dados (ANPD).</p>
+
+                    <h4>10. Segurança</h4>
+                    <p>Adotamos medidas técnicas e organizacionais razoáveis para proteger os dados contra acesso não autorizado, perda e uso indevido. Nenhum sistema é totalmente imune a riscos, por isso pedimos que você evite enviar dados sensíveis desnecessários.</p>
+
+                    <h4>11. Crianças e adolescentes</h4>
+                    <p>Este site é voltado a adultos. Atendimentos de menores de 18 anos são combinados com o responsável legal.</p>
+
+                    <h4>12. Alterações</h4>
+                    <p>Podemos atualizar esta Política a qualquer momento. A data de atualização no topo indica a versão em vigor.</p>
+                </article>
+
+                <article data-pane="terms" hidden>
+                    <p class="legal-date">Última atualização: setembro de 2026</p>
+                    <p>Ao acessar este site, você concorda com os termos abaixo. Se não concordar, recomendamos não utilizá-lo.</p>
+
+                    <h4>1. Finalidade do site</h4>
+                    <p>O site é <strong>somente informativo</strong>. Ele apresenta o Studio PodoVitta, seus serviços e formas de contato. Não realizamos vendas, cobranças, cadastros nem agendamentos automáticos por aqui: os horários são combinados e confirmados com nossa equipe, por WhatsApp, telefone ou e-mail.</p>
+
+                    <h4>2. Conteúdo não substitui consulta</h4>
+                    <p>Os textos, imagens e vídeos têm caráter geral e educativo. Não constituem diagnóstico, prescrição ou orientação individual, e não substituem a avaliação presencial por profissional habilitado. Em caso de urgência, procure um serviço de saúde ou ligue para o SAMU (192).</p>
+
+                    <h4>3. Serviços e resultados</h4>
+                    <p>Serviços, valores, horários e condições podem mudar sem aviso prévio e são confirmados no momento do agendamento. Resultados de tratamentos variam de pessoa para pessoa e não são garantidos.</p>
+
+                    <h4>4. Propriedade intelectual</h4>
+                    <p>A marca Studio PodoVitta, os textos, o layout e os demais elementos do site pertencem à clínica ou são usados com autorização. É proibido copiar, reproduzir ou distribuir esse conteúdo sem permissão prévia por escrito. Imagens de terceiros pertencem aos respectivos titulares.</p>
+
+                    <h4>5. Uso adequado</h4>
+                    <p>Você se compromete a usar o site de forma lícita, sem tentar comprometer seu funcionamento, sua segurança ou o acesso de outras pessoas.</p>
+
+                    <h4>6. Links e serviços de terceiros</h4>
+                    <p>O site pode direcionar você a serviços externos, como o WhatsApp e redes sociais. Não controlamos esses serviços nem nos responsabilizamos pelo conteúdo e pelas políticas deles.</p>
+
+                    <h4>7. Limitação de responsabilidade</h4>
+                    <p>Nos esforçamos para manter as informações corretas e o site disponível, mas não garantimos ausência de erros ou interrupções. A clínica não responde por danos decorrentes do uso do conteúdo como substituto de atendimento profissional.</p>
+
+                    <h4>8. Privacidade</h4>
+                    <p>O tratamento de dados pessoais é descrito na nossa <a href="#" data-legal="privacy">Política de Privacidade</a>, que integra estes Termos.</p>
+
+                    <h4>9. Alterações</h4>
+                    <p>Estes Termos podem ser atualizados a qualquer momento. O uso do site após a atualização indica concordância com a nova versão.</p>
+
+                    <h4>10. Lei aplicável e foro</h4>
+                    <p>Estes Termos seguem a legislação brasileira. Fica eleito o foro da comarca de São Paulo/SP, ressalvado o direito do consumidor de ajuizar ação no foro do seu domicílio.</p>
+
+                    <h4>11. Contato</h4>
+                    <p>Dúvidas sobre estes Termos: <a href="mailto:contato@studiopodovitta.com.br">contato@studiopodovitta.com.br</a>.</p>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20no%20Studio%20PodoVitta." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener" 
+       aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <button type="button" class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
