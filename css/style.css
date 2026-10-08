@@ -1,4 +1,4 @@
-        /* ===== RESET E VARIÁVEIS ===== */
+       /* ===== RESET E VARIÁVEIS ===== */
         *, *::before, *::after {
             margin: 0;
             padding: 0;
@@ -4581,5 +4581,42 @@ h4 {
     .credit-hero {
         left: 10px;
         bottom: 8px;
+    }
+}
+
+/* ===== CARREGAMENTO DE IMAGENS (galeria e blog) ===== */
+.img-fade .g-item img,
+.img-fade .b-img img {
+    opacity: 0;
+    transition: opacity .45s ease, transform .7s var(--ease);
+}
+
+.img-fade .g-item img.is-loaded,
+.img-fade .b-img img.is-loaded {
+    opacity: 1;
+}
+
+.g-item img,
+.b-img img {
+    backface-visibility: hidden;
+}
+
+.g-item figcaption {
+    transition: opacity .35s var(--ease), transform .35s var(--ease);
+}
+
+/* blur em cada crédito pesa no scroll de celulares: fundo sólido no mobile */
+@media (max-width: 860px) {
+    .credit {
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+        background: rgba(8, 26, 21, .78);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .img-fade .g-item img,
+    .img-fade .b-img img {
+        transition: none;
     }
 }
