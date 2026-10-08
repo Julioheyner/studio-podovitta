@@ -114,7 +114,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     function showPhoto(i) {
         idx = (i + photos.length) % photos.length;
         const f = photos[idx];
-        body.innerHTML = '<img src="' + f.dataset.full + '" alt="">';
+        body.innerHTML = '<img src="' + f.dataset.full + '" alt="" decoding="async">';
+        [idx + 1, idx - 1].forEach(n => { new Image().src = photos[(n + photos.length) % photos.length].dataset.full; });
         body.firstChild.onerror = function () { this.src = f.querySelector('img') ? f.querySelector('img').src : ''; };
         cap.textContent = f.dataset.cap;
         setCredit(f.querySelector('.credit'));
@@ -252,10 +253,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     ];
     const grid = document.getElementById('blogGrid'), ov = document.getElementById('post');
     if (!grid || !ov) return;
-    const bad = "var f=this.dataset.f;this.onerror=function(){this.remove()};if(f){this.src=f}else{this.remove()}";
+    const bad = "var f=this.dataset.f;this.onerror=function(){this.remove()};if(f){this.removeAttribute('srcset');this.src=f}else{this.remove()}";
+    const rs = (u, w, e) => String(u).replace(/\.(jpe?g|png)$/i, "-" + w + "." + e);
+    const imgAttrs = u => 'src="' + esc(rs(u, 800, "jpg")) + '" srcset="' + esc(rs(u, 480, "webp")) + ' 480w, ' + esc(rs(u, 800, "webp")) + ' 800w" sizes="(max-width: 700px) 92vw, (max-width: 1100px) 46vw, 380px" width="800" height="533"';
     const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
     const crd = (p, cls) => p.credit ? '<a class="credit' + (cls || '') + '" href="' + esc(p.credit.url) + '" target="_blank" rel="noopener noreferrer" aria-label="Crédito: Imagem de ' + esc(p.credit.by) + ' (abre em nova aba)">Imagem de ' + esc(p.credit.by) + ' <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>' : '';
-    grid.innerHTML = POSTS.map((p, i) => '<div role="button" tabindex="0" class="b-card" data-i="' + i + '" aria-label=""Ler: ' + esc(p.title) + '"><span class="b-img"><i class="fas ' + (p.icon || 'fa-leaf') + ' g-fallback"></i>' + (p.img ? '<img src="' + esc(p.img) + '" data-f="' + esc(p.fallback || '') + '" alt="" loading="lazy" onerror="' + bad + '">' : '') + (p.img ? crd(p) : '') + '</span><span class="b-body"><span class="b-meta"><b class="b-tag">' + esc(p.tag) + '</b><span>' + esc(p.date) + '</span>' + (p.read ? '<span><i class="fas fa-clock"></i> ' + esc(p.read) + '</span>' : '') + '</span><strong>' + esc(p.title) + '</strong><span class="b-ex">' + esc(p.excerpt) + '</span><span class="b-more">Ler artigo <i class="fas fa-arrow-right"></i></span></span></div>').join('');
+    grid.innerHTML = POSTS.map((p, i) => '<div role="button" tabindex="0" class="b-card" data-i="' + i + '" aria-label="Ler: ' + esc(p.title) + '"><span class="b-img"><i class="fas ' + (p.icon || 'fa-leaf') + ' g-fallback"></i>' + (p.img ? '<img ' + imgAttrs(p.img) + ' data-f="' + esc(p.fallback || p.img) + '" alt="" loading="lazy" decoding="async" onerror="' + bad + '">' : '') + (p.img ? crd(p) : '') + '</span><span class="b-body"><span class="b-meta"><b class="b-tag">' + esc(p.tag) + '</b><span>' + esc(p.date) + '</span>' + (p.read ? '<span><i class="fas fa-clock"></i> ' + esc(p.read) + '</span>' : '') + '</span><strong>' + esc(p.title) + '</strong><span class="b-ex">' + esc(p.excerpt) + '</span><span class="b-more">Ler artigo <i class="fas fa-arrow-right"></i></span></span></div>').join('');
     let opener = null;
     const close = () => { ov.hidden = true; document.body.classList.remove('ov-open'); if (opener) opener.focus(); opener = null; };
     grid.addEventListener('keydown', e => {
@@ -266,7 +269,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const b = e.target.closest('.b-card'); if (!b || e.target.closest('.credit')) return;
         const p = POSTS[+b.dataset.i];
         document.getElementById('postTitle').textContent = p.title;
-        document.getElementById('postBody').innerHTML = (p.img ? '<img src="' + esc(p.img) + '" data-f="' + esc(p.fallback || '') + '" alt="" onerror="' + bad + '">' : '') + (p.img ? crd(p, ' credit-inline') : '') + '<b class="b-tag">' + esc(p.tag) + '</b>' + p.body + '<div class="post-cta"><p>Ficou com alguma dúvida? Converse com a Podóloga Camila e agende sua avaliação.</p><a class="btn btn-whatsapp" href="https://wa.me/5511999999999?text=' + encodeURIComponent('Olá! Li o artigo "' + p.title + '" e gostaria de agendar uma avaliação.') + '" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Agendar uma avaliação</a></div>';
+        document.getElementById('postBody').innerHTML = (p.img ? '<img src="' + esc(p.img) + '" data-f="' + esc(p.fallback || '') + '" width="1200" height="800" alt="" decoding="async" onerror="' + bad + '">' : '') + (p.img ? crd(p, ' credit-inline') : '') + '<b class="b-tag">' + esc(p.tag) + '</b>' + p.body + '<div class="post-cta"><p>Ficou com alguma dúvida? Converse com a Podóloga Camila e agende sua avaliação.</p><a class="btn btn-whatsapp" href="https://wa.me/5511999999999?text=' + encodeURIComponent('Olá! Li o artigo "' + p.title + '" e gostaria de agendar uma avaliação.') + '" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Agendar uma avaliação</a></div>';
         document.getElementById('postBody').scrollTop = 0;
         opener = b; ov.hidden = false; document.body.classList.add('ov-open'); ov.querySelector('[data-close]').focus();
     });
@@ -343,4 +346,34 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const fb = document.querySelector('.footer-bottom'), btt = document.getElementById('backToTop');
     if (!fb || !btt || !('IntersectionObserver' in window)) return;
     new IntersectionObserver(es => es.forEach(e => btt.classList.toggle('at-footer', e.isIntersecting))).observe(fb);
+})();
+
+
+/* ===== CARREGAMENTO SUAVE DAS IMAGENS (galeria e blog) ===== */
+(function () {
+    const SEL = '.g-item img, .b-img img';
+    document.documentElement.classList.add('img-fade');
+
+    // Só mostra a imagem depois de decodificada: evita o efeito "metade carregada" durante o scroll
+    const reveal = img => {
+        if (img.dataset.watch) return;
+        img.dataset.watch = '1';
+        const show = () => img.classList.add('is-loaded');
+        const ready = () => (img.decode ? img.decode().then(show, show) : show());
+        if (img.complete && img.naturalWidth) ready();
+        else img.addEventListener('load', ready, { once: true });
+    };
+    document.querySelectorAll(SEL).forEach(reveal);
+
+    // Começa a baixar antes de a seção entrar na tela (inclui os slides do carrossel mobile)
+    const warm = el => el.querySelectorAll(SEL).forEach(i => { i.loading = 'eager'; });
+    const sections = document.querySelectorAll('#galeria, #blog');
+    if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver(es => es.forEach(e => {
+            if (e.isIntersecting) { warm(e.target); io.unobserve(e.target); }
+        }), { rootMargin: '900px 0px' });
+        sections.forEach(x => io.observe(x));
+    } else {
+        sections.forEach(warm);
+    }
 })();
