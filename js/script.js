@@ -217,7 +217,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         {
             "img": "img/blog/unha-encravada.jpg",
             "fallback": "img/blog/unha-encravada.jpg",
-            "credit": {"by": "kroshka__nastya no Magnific", "url": "https://www.magnific.com/br/fotos-gratis/processo-de-pedicure-home-salon-pedicure-tratamento-de-pes-e-unhas-o-processo-de-pedicure-profissional-mestre-em-luvas-azuis-fazer-pedicure_11402494.htm#fromView=search&page=1&position=0&uuid=fa1c1f4a-05fa-40f0-92a4-96f482ba96a6&track=ais_hybrid&query=p%C3%A9s+unha+encravada"},
+            "credit": {"by": "no Magnific", "url": "https://www.magnific.com/br/fotos-gratis/processo-de-pedicure-home-salon-pedicure-tratamento-de-pes-e-unhas-o-processo-de-pedicure-profissional-mestre-em-luvas-azuis-fazer-pedicure_11402494.htm#fromView=search&page=1&position=0&uuid=fa1c1f4a-05fa-40f0-92a4-96f482ba96a6&track=ais_hybrid&query=p%C3%A9s+unha+encravada"},
             "icon": "fa-notes-medical",
             "tag": "Unhas",
             "date": "28 set 2026",
@@ -269,7 +269,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const b = e.target.closest('.b-card'); if (!b || e.target.closest('.credit')) return;
         const p = POSTS[+b.dataset.i];
         document.getElementById('postTitle').textContent = p.title;
-        document.getElementById('postBody').innerHTML = (p.img ? '<img src="' + esc(p.img) + '" data-f="' + esc(p.fallback || '') + '" width="1200" height="800" alt="" decoding="async" onerror="' + bad + '">' : '') + (p.img ? crd(p, ' credit-inline') : '') + '<b class="b-tag">' + esc(p.tag) + '</b>' + p.body + '<div class="post-cta"><p>Ficou com alguma dúvida? Converse com a Podóloga Camila e agende sua avaliação.</p><a class="btn btn-whatsapp" href="https://wa.me/5511999999999?text=' + encodeURIComponent('Olá! Li o artigo "' + p.title + '" e gostaria de agendar uma avaliação.') + '" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Agendar uma avaliação</a></div>';
+        document.getElementById('postBody').innerHTML = (p.img ? '<span class="post-img"><img src="' + esc(p.img) + '" data-f="' + esc(p.fallback || '') + '" width="1200" height="800" alt="" decoding="async" onerror="' + bad + '">' + crd(p) + '</span>' : '') + '<b class="b-tag">' + esc(p.tag) + '</b>' + p.body + '<div class="post-cta"><p>Ficou com alguma dúvida? Converse com a Podóloga Camila e agende sua avaliação.</p><a class="btn btn-whatsapp" href="https://wa.me/5511999999999?text=' + encodeURIComponent('Olá! Li o artigo "' + p.title + '" e gostaria de agendar uma avaliação.') + '" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Agendar uma avaliação</a></div>';
         document.getElementById('postBody').scrollTop = 0;
         opener = b; ov.hidden = false; document.body.classList.add('ov-open'); ov.querySelector('[data-close]').focus();
     });
@@ -377,3 +377,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         sections.forEach(warm);
     }
 })();
+
