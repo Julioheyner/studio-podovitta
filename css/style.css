@@ -1,4 +1,4 @@
-       /* ===== RESET E VARIÁVEIS ===== */
+      /* ===== RESET E VARIÁVEIS ===== */
         *, *::before, *::after {
             margin: 0;
             padding: 0;
@@ -4226,8 +4226,9 @@ h4 {
     }
 
     .hero-grid {
-        grid-template-columns: 1.3fr .7fr;
-        gap: 28px;
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+        gap: 24px;
+        align-items: center;
     }
 
     .hero h1 {
@@ -4258,33 +4259,95 @@ h4 {
         gap: 22px;
     }
 
+    /* Card da profissional: retrato à esquerda, frase à direita,
+       tags em 3 colunas iguais e crédito numa linha própria (sem sobrepor o botão) */
     .hero-card {
-        max-width: 230px;
+        max-width: 400px;
+        width: 100%;
         margin: 0 0 0 auto;
-        padding: 10px 10px 14px;
-        display: block;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: minmax(0, 46%) minmax(0, 1fr);
+        grid-template-rows: auto auto auto;
+        column-gap: 14px;
+        align-items: center;
     }
 
     .hero-card .portrait-btn {
-        aspect-ratio: 1 / 1;
-        margin-bottom: 12px;
+        grid-column: 1;
+        grid-row: 1;
+        aspect-ratio: 4 / 5;
+        margin-bottom: 0;
+        border-radius: 14px;
     }
 
     .hero-card-quote {
-        font-size: .78rem;
-        margin-bottom: 10px;
-        padding: 0 6px;
+        grid-column: 2;
+        grid-row: 1;
+        align-self: center;
+        padding: 0 4px 0 0;
+        margin: 0;
+        font-size: clamp(.74rem, 1.9vw, .86rem);
+        line-height: 1.5;
     }
 
     .hero-card-tags {
-        padding: 0 6px;
+        grid-column: 1 / -1;
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 6px;
+        padding: 0;
+        margin-top: 10px;
+    }
+
+    .hero-card-tag {
+        justify-content: center;
+        gap: 5px;
+        padding: 5px 6px;
+        font-size: .66rem;
+        line-height: 1.2;
+        white-space: nowrap;
+    }
+
+    .hero-card-tag i {
+        font-size: .62rem;
+    }
+
+    /* Crédito sai de cima do retrato e fica numa linha própria, centralizada */
+    .hero-card .credit-portrait {
+        position: static;
+        grid-column: 1 / -1;
+        grid-row: 3;
+        justify-self: center;
+        margin-top: 8px;
+        max-width: 100%;
+    }
+
+    .portrait-info {
+        left: 10px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .portrait-info strong {
+        font-size: .95rem;
+        line-height: 1.15;
+    }
+
+    .portrait-info small {
+        display: block;
+        font-size: .64rem;
+        line-height: 1.25;
     }
 
     .portrait-hint {
         top: 8px;
         right: 8px;
-        padding: 6px 10px;
-        font-size: .68rem;
+        gap: 5px;
+        padding: 5px 8px;
+        font-size: .62rem;
+        white-space: nowrap;
     }
 
     .map-wrapper {
@@ -4619,4 +4682,33 @@ h4 {
     .img-fade .b-img img {
         transition: none;
     }
+}
+
+
+/* Crédito da imagem no modal do artigo: mesmo destaque dos cards */
+.post-card .legal-body .post-img {
+    position: relative;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.post-card .legal-body .post-img img {
+    margin-bottom: 0;
+}
+
+.post-img .credit {
+    top: 10px;
+    left: 10px;
+}
+
+/* .legal-body a (cor verde + sublinhado) vencia .credit por especificidade: reaplica o estilo dos cards */
+.legal-body a.credit {
+    color: rgba(255, 255, 255, .88);
+    text-decoration: none;
+}
+
+.legal-body a.credit:hover,
+.legal-body a.credit:focus-visible {
+    color: #fff;
+    text-decoration: underline;
 }
